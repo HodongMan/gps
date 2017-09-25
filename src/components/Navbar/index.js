@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 
-export class Navbar extends PureComponent{
+export default class Navbar extends PureComponent{
 
     render(){
         return(

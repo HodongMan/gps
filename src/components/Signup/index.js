@@ -5,7 +5,7 @@ export default class Signup extends PureComponent{
 
     render() {
         const marginStyle = {
-            "margin-top" : "40px"
+            "marginTop" : "40px"
         };
 
         return(
@@ -30,7 +30,7 @@ export default class Signup extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-user"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Username" name="loginname" type="text" autofocus />
+                                                        <input className="form-control" placeholder="Username" name="loginname" type="text" autoFocus />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
