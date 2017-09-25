@@ -10,5 +10,6 @@ export {
     Login,
     Signup,
     Search,
-    Contents
+    Contents,
+    Comments
 };

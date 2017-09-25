@@ -2,9 +2,13 @@ import React, {PureComponent} from 'react';
 
 export default class Contents extends PureComponent{
 
+
     render(){
+        const widthStyle = {
+            "width" : "20rem",
+        };
         return(
-            <div className="card" style="width: 20rem;">
+            <div className="card" style={widthStyle}>
                 <img className="card-img-top" src="" alt="Card image cap" />
                 <div className="card-block">
                     <h4 className="card-title">Card title</h4>
