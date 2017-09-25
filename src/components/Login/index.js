@@ -2,18 +2,58 @@ import React, {PureComponent} from 'react';
 
 export default class Login extends PureComponent{
 
+
     render() {
+        const marginStyle = {
+            "marginTop" : "40px"
+        };
+
         return(
-            <div className="wrapper">
-                <form className="form-signin">
-                    <h2 className="form-signin-heading">Please login</h2>
-                    <input type="text" className="form-control" name="username" placeholder="Email Address" required="" autoFocus="" />
-                    <input type="password" className="form-control" name="password" placeholder="Password" required=""/>
-                    <label className="checkbox">
-                        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe" placeholder='Remember Me'/>
-                    </label>
-                    <button className="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                </form>
+            <div className="container" style={marginStyle}>
+                <div className="row">
+                    <div className="col-sm-6 col-md-4 col-md-offset-4">
+                        <div className="panel panel-default">
+                            <div className="panel-heading">
+                                <strong> login </strong>
+                            </div>
+                            <div className="panel-body">
+                                <form role="form">
+                                    <fieldset>
+                                        <div className="row">
+                                            <div className="center-block">
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm-12 col-md-10  col-md-offset-1 ">
+                                                <div className="form-group">
+                                                    <div className="input-group">
+                                                        <span className="input-group-addon">
+                                                            <i className="glyphicon glyphicon-user"></i>
+                                                        </span>
+                                                        <input className="form-control" placeholder="Username" name="loginname" type="text" autoFocus />
+                                                    </div>
+                                                </div>
+                                                <div className="form-group">
+                                                    <div className="input-group">
+                                                        <span className="input-group-addon">
+                                                            <i className="glyphicon glyphicon-lock"></i>
+                                                        </span>
+                                                        <input className="form-control" placeholder="Password" name="password" type="password" value="" />
+                                                    </div>
+                                                </div>
+                                                <div className="form-group">
+                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" value="Login" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div className="panel-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -4,6 +4,7 @@ import {Login} from './components';
 import {Signup} from './components';
 import {Search} from './components';
 import {Contents, Comments} from './components';
+import {Mypage} from './components';
 
 class App extends Component {
     render() {
@@ -15,6 +16,7 @@ class App extends Component {
                 <Search />
                 <Contents />
                 <Comments />
+                <Mypage />
             </div>
         );
     }

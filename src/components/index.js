@@ -4,6 +4,7 @@ import Signup from './Signup';
 import Search from './Search';
 import Contents from './Contents';
 import Comments from './Comments';
+import Mypage from './Mypage';
 
 export {
     Navbar,
@@ -11,5 +12,6 @@ export {
     Signup,
     Search,
     Contents,
-    Comments
+    Comments,
+    Mypage
 };

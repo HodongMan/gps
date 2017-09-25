@@ -14,7 +14,7 @@ export default class Signup extends PureComponent{
                     <div className="col-sm-6 col-md-4 col-md-offset-4">
                         <div className="panel panel-default">
                             <div className="panel-heading">
-                                <strong> Sign in to continue</strong>
+                                <strong> Sign up </strong>
                             </div>
                             <div className="panel-body">
                                 <form role="form">
@@ -36,13 +36,29 @@ export default class Signup extends PureComponent{
                                                 <div className="form-group">
                                                     <div className="input-group">
                                                         <span className="input-group-addon">
+                                                            <i className="glyphicon glyphicon-user"></i>
+                                                        </span>
+                                                        <input className="form-control" placeholder="Email" name="email" type="email" autoFocus />
+                                                    </div>
+                                                </div>
+                                                <div className="form-group">
+                                                    <div className="input-group">
+                                                        <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-lock"></i>
                                                         </span>
                                                         <input className="form-control" placeholder="Password" name="password" type="password" value="" />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
-                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" value="Sign in" />
+                                                    <div className="input-group">
+                                                        <span className="input-group-addon">
+                                                            <i className="glyphicon glyphicon-lock"></i>
+                                                        </span>
+                                                        <input className="form-control" placeholder="Password Confirm" name="password_confirm" type="password" value="" />
+                                                    </div>
+                                                </div>
+                                                <div className="form-group">
+                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" value="Sign up" />
                                                 </div>
                                             </div>
                                         </div>

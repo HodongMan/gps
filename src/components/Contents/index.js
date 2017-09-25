@@ -4,16 +4,18 @@ export default class Contents extends PureComponent{
 
 
     render(){
-        const widthStyle = {
-            "width" : "20rem",
-        };
         return(
-            <div className="card" style={widthStyle}>
-                <img className="card-img-top" src="" alt="Card image cap" />
-                <div className="card-block">
-                    <h4 className="card-title">Card title</h4>
-                    <p className="card-text"></p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+            <div className="row">
+                <div className="col-sm-6 col-md-4">
+                    <div className="thumbnail">
+                        <img src="..." alt="..."/>
+                        <div className="caption">
+                              <h4>Content Title</h4>
+                              <p></p>
+                              <p><a href="#" className="btn btn-primary" role="button">등록</a>
+                              <a href="#" className="btn btn-default" role="button">삭제</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
