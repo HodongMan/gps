@@ -13,15 +13,15 @@ export default class Navbar extends PureComponent{
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul className="nav navbar-nav navbar-right">
                         <li className="nav-item">
-                            <a className="nav-link" href="#"> 위치 검색 </a>
+                            <a className="nav-link" href="./Search"> 위치 검색 </a>
                         </li>
 
                         <li className="nav-item active">
-                            <a className="nav-link" href="#"> 위치 정보 <span className="sr-only">(current)</span></a>
+                            <a className="nav-link" href="./Mypage"> 위치 정보 <span className="sr-only">(current)</span></a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#"> 회원 수정 </a>
+                            <a className="nav-link" href="./Editpage"> 회원 수정 </a>
                         </li>
 
                     </ul>

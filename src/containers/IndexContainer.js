@@ -10,7 +10,7 @@ export default class IndexContainer extends Component{
     }
 
     componentDidMount(){
-        
+
     }
 
     render(){
