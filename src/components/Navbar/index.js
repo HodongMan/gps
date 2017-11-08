@@ -9,7 +9,7 @@ export default class Navbar extends PureComponent{
                 <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <a className="navbar-brand" href="#">Project </a>
+                <a className="navbar-brand" href="./Login">PROJECT </a>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul className="nav navbar-nav navbar-right">
                         <li className="nav-item">
@@ -17,7 +17,7 @@ export default class Navbar extends PureComponent{
                         </li>
 
                         <li className="nav-item active">
-                            <a className="nav-link" href="./Mypage"> 위치 정보 <span className="sr-only">(current)</span></a>
+                            <a className="nav-link" href="./Mypage"> 정보 확인 <span className="sr-only">(current)</span></a>
                         </li>
 
                         <li className="nav-item">

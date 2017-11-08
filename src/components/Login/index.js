@@ -1,8 +1,6 @@
 import React, {PureComponent} from 'react';
 
 export default class Login extends PureComponent{
-
-
     render() {
         const marginStyle = {
             "marginTop" : "40px"
@@ -43,7 +41,9 @@ export default class Login extends PureComponent{
                                                 </div>
                                                 <div className="form-group">
                                                     <input type="submit" className="btn btn-lg btn-primary btn-block" value="Login " />
-
+                                                </div>
+                                                <div>
+                                                      <h4><a href="./Signup" class="btn btn-primary">회원 가입</a></h4>
                                                 </div>
                                             </div>
                                         </div>

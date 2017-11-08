@@ -1,10 +1,23 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, PropTypes} from 'react';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
-export default class Search extends PureComponent{
-
+class Search extends PureComponent{
     render(){
-
         return(
+          <div>
+              <Map google={this.props.google} zoom={8}>
+                <Marker onClick={this.onMarkerClick}
+                        name={'current position'}
+                        position={{lat: 35.189522 , lng: 129.071503 }} >
+                </Marker>
+
+                <InfoWindow onClose={this.onInfoWindowClose}>
+                    <div>
+                      <h1>{5}</h1>
+                    </div>
+                </InfoWindow>
+              </Map>
+
             <div className="container">
                 <div className="row">
                     <div className="col-sm-6 col-sm-offset-3">
@@ -21,6 +34,10 @@ export default class Search extends PureComponent{
                     </div>
                 </div>
             </div>
+          </div>
         );
     }
 }
+export default GoogleApiWrapper({
+  apiKey: ("AIzaSyA3ReFs7ndLhblZolws5YXcmuXhUMXhrHI")
+})(Search)

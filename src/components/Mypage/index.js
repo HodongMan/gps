@@ -1,43 +1,45 @@
 import React, {PureComponent} from 'react';
-import './start.css' ;
+import { Card, CardBody, Button, CardImg, CardTitle, CardText, CardGroup, CardSubtitle, CardBlock } from 'reactstrap';
+import './start.css';
 
 export default class Mypage extends PureComponent{
 
       render() {
-          return(
-              <div className="card-group">
-                  <div className="card">
-                      <img className="card-img-top" src="..." alt="Card image cap" id="imgSize" />
-                      <div className="card-block">
-                          <h4 className="card-title">Card title</h4>
-                          <p className="card-text"></p>
-                      </div>
-                      <div className="card-footer">
-                          <small className="text-muted">Last updated 3 mins ago</small>
-                      </div>
-                  </div>
-                  <div className="card">
-                      <img className="card-img-top" src="..." alt="Card image cap" />
-                      <div className="card-block">
-                          <h4 className="card-title">Card title</h4>
-                          <p className="card-text"></p>
-                      </div>
-                      <div className="card-footer">
-                          <small className="text-muted">Last updated 3 mins ago</small>
-                      </div>
-                  </div>
-                  <div className="card">
-                      <img className="card-img-top" src="..." alt="Card image cap" />
-                      <div className="card-block">
-                          <h4 className="card-title">Card title</h4>
-                          <p className="card-text"></p>
-                      </div>
-                      <div className="card-footer">
-                          <small className="text-muted">Last updated 3 mins ago</small>
-                      </div>
-                  </div>
-            </div>
-          );
+        return(
+          <CardGroup>
+             <Card>
+              <CardBlock>
+                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+                 <CardTitle>위치</CardTitle>
+                 <CardSubtitle>제목</CardSubtitle>
+                 <CardText>내용</CardText>
+                 <CardText>댓글내용</CardText>
+                 <Button>삭제</Button>
+              </CardBlock>
+             </Card>
 
-      }
-}
+             <Card>
+              <CardBlock>
+               <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+                  <CardTitle>위치</CardTitle>
+                  <CardSubtitle>제목</CardSubtitle>
+                  <CardText>내용</CardText>
+                  <CardText>댓글내용</CardText>
+                 <Button>삭제</Button>
+              </CardBlock>
+             </Card>
+
+             <Card>
+               <CardBlock>
+                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+                  <CardTitle>위치</CardTitle>
+                  <CardSubtitle>제목</CardSubtitle>
+                  <CardText>내용</CardText>
+                  <CardText>댓글내용</CardText>
+                 <Button>삭제</Button>
+               </CardBlock>
+             </Card>
+           </CardGroup>
+          );
+      };
+  }
