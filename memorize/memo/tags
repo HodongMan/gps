@@ -1,0 +1,22 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+content	/home/jhd9206/바탕화면/New/gps/memorize/memo/models.py	/^    content = models.TextField()$/;"	v	language:Python	class:Memo
+created	/home/jhd9206/바탕화면/New/gps/memorize/memo/models.py	/^    created = models.DateTimeField(auto_now_add=True)$/;"	v	language:Python	class:Memo
+fields	/home/jhd9206/바탕화면/New/gps/memorize/memo/serializer.py	/^        fields = ($/;"	v	language:Python	class:MemoSerializer.Meta
+Memo	/home/jhd9206/바탕화면/New/gps/memorize/memo/models.py	/^class Memo(models.Model):$/;"	c	language:Python
+MemoDetail	/home/jhd9206/바탕화면/New/gps/memorize/memo/views.py	/^class MemoDetail(generics.RetrieveUpdateDestroyAPIView):$/;"	c	language:Python
+MemoList	/home/jhd9206/바탕화면/New/gps/memorize/memo/views.py	/^class MemoList(generics.ListCreateAPIView):$/;"	c	language:Python
+MemoSerializer	/home/jhd9206/바탕화면/New/gps/memorize/memo/serializer.py	/^class MemoSerializer(serializers.ModelSerializer):$/;"	c	language:Python
+Meta	/home/jhd9206/바탕화면/New/gps/memorize/memo/models.py	/^    class Meta:$/;"	c	language:Python	class:Memo
+Meta	/home/jhd9206/바탕화면/New/gps/memorize/memo/serializer.py	/^    class Meta:$/;"	c	language:Python	class:MemoSerializer
+model	/home/jhd9206/바탕화면/New/gps/memorize/memo/serializer.py	/^        model = Memo$/;"	v	language:Python	class:MemoSerializer.Meta
+name	/home/jhd9206/바탕화면/New/gps/memorize/memo/models.py	/^    name = models.CharField(max_length=200)$/;"	v	language:Python	class:Memo
+name	/home/jhd9206/바탕화면/New/gps/memorize/memo/urls.py	/^        name=views.MemoDetail.name),$/;"	v	language:Python
+name	/home/jhd9206/바탕화면/New/gps/memorize/memo/urls.py	/^        name=views.MemoList.name),$/;"	v	language:Python
+name	/home/jhd9206/바탕화면/New/gps/memorize/memo/views.py	/^    name = 'memo-detail'$/;"	v	language:Python	class:MemoDetail
+name	/home/jhd9206/바탕화면/New/gps/memorize/memo/views.py	/^    name = 'memo-list'$/;"	v	language:Python	class:MemoList
+ordering	/home/jhd9206/바탕화면/New/gps/memorize/memo/models.py	/^        ordering = ('-created',)$/;"	v	language:Python	class:Memo.Meta
+queryset	/home/jhd9206/바탕화면/New/gps/memorize/memo/views.py	/^    queryset = Memo.objects.all()$/;"	v	language:Python	class:MemoDetail
+queryset	/home/jhd9206/바탕화면/New/gps/memorize/memo/views.py	/^    queryset = Memo.objects.all()$/;"	v	language:Python	class:MemoList
+serializer_class	/home/jhd9206/바탕화면/New/gps/memorize/memo/views.py	/^    serializer_class = MemoSerializer$/;"	v	language:Python	class:MemoDetail
+serializer_class	/home/jhd9206/바탕화면/New/gps/memorize/memo/views.py	/^    serializer_class = MemoSerializer$/;"	v	language:Python	class:MemoList
+urlpatterns	/home/jhd9206/바탕화면/New/gps/memorize/memo/urls.py	/^urlpatterns = [$/;"	v	language:Python
