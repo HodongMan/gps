@@ -1,6 +1,28 @@
 import React, {PureComponent} from 'react';
 
 export default class Login extends PureComponent{
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLogin : false,
+      loginname : '',
+      password : '',
+    };
+  }
+
+  onLogin() {
+    if(!this.state.isLogin) {
+      this.setState({
+        loginname : this.props.loginname,
+        password : this.props.password
+      })
+    }
+  }
+
+  validateForm() {
+    return this.state.password.length > 0 && this.state.password.length > 0;
+  }
+
     render() {
         const marginStyle = {
             "marginTop" : "40px"
@@ -36,11 +58,11 @@ export default class Login extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-lock"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Password" name="password" type="password" value="" />
+                                                        <input className="form-control" placeholder="Password" name="password" type="password" onClick={this.validateForm} />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
-                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" value="Login " />
+                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" onClick={this.onLogin} value="Login " />
                                                 </div>
                                                 <div>
                                                       <h4><a href="./Signup" class="btn btn-primary">회원 가입</a></h4>

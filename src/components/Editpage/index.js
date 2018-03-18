@@ -1,8 +1,62 @@
 import React, {PureComponent} from 'react';
 
 export default class Editpage extends PureComponent{
+    constructor(props) {
+      super(props);
 
+      this.state = {
+        isEdit : false,
+        loginname : '',
+        email : '',
+        password : '',
+        password_confirm : ''
+      };
 
+    //  this.handleToggle = this.handleToggle.bind(this);
+    //  this.handleChange = this.handleChange.bind(this);
+    //  this.handleEdit = this.handleEdit.bind(this);
+    //  this.handleRemove = this.handleRemove.bind(this);
+    }
+
+    handleToggle() {
+      if(!this.state.isEdit) {
+        this.setState({
+          loginname : this.props.loginname,
+          email : this.props.email,
+          password : this.props.password,
+          password_confirm : this.props.password_confirm
+        })
+      }
+
+      this.setState({
+        isEdit : !this.state.isEdit
+      });
+    }
+
+    handleEdit(loginname, email, password, password_confirm) {
+      this.setState({
+          [this.state.id] : {
+            loginname : this.props.loginname,
+            email : this.props.email,
+            password : this.props.password,
+            password_confirm : this.props.password_confirm
+          }
+      })
+    }
+
+    handleRemove(loginname, email, password, password_confirm) {
+      if(this.state.id < 0) {
+        return;
+      }
+      this.setState({
+        [this.state.id] : {
+          loginname : this.props.loginname,
+          email : this.props.email,
+          password : this.props.password,
+          password_confirm : this.props.password_confirm
+        }
+      })
+    }
     render() {
         const marginStyle = {
             "marginTop" : "40px"
@@ -58,8 +112,8 @@ export default class Editpage extends PureComponent{
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
-                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" value="회원 수정" />
-                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" value="회원 탈퇴" />
+                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" onClick={this.handleEdit} value="회원 수정" />
+                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" onClick={this.handleRemove} value="회원 탈퇴" />
                                                 </div>
                                             </div>
                                         </div>
