@@ -13,6 +13,7 @@ export default class Signup extends PureComponent{
     }
 
     onSignup() {
+      /*
         var state = this.state;
 
         state[state.loginname] = this.value;
@@ -21,7 +22,13 @@ export default class Signup extends PureComponent{
         state[state.password_confirm] = this.value;
 
         this.setState(state);
+*/
+        this.state.loginname = this.value;
+        this.state.email = this.value;
+        this.state.password = this.value;
+        this.state.password_confirm = this.value;
       }
+
 
     render() {
         var {loginname, email, password, password_confirm} = this.state;
