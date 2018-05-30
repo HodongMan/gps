@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {Search, Mypage} from '../components';
+import {Search, Mypage, Signup, Login} from '../components';
 
 
 export default class IndexContainer extends Component{
@@ -10,15 +10,18 @@ export default class IndexContainer extends Component{
     }
 
     componentDidMount(){
-        
+
     }
 
+    onLogin(){
+
+    }
     render(){
 
         return(
             <div>
-                <Search />
-                <Mypage />
+              <Login />
+
             </div>
         );
     }

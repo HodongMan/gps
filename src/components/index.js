@@ -5,6 +5,7 @@ import Search from './Search';
 import Contents from './Contents';
 import Comments from './Comments';
 import Mypage from './Mypage';
+import Editpage from './Editpage';
 
 export {
     Navbar,
@@ -13,5 +14,6 @@ export {
     Search,
     Contents,
     Comments,
-    Mypage
+    Mypage,
+    Editpage
 };

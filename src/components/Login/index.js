@@ -1,7 +1,70 @@
 import React, {PureComponent} from 'react';
+import cookie from 'react-cookie';
+/*
+static propTypes = {
+  cookies: instanceOf(Cookies).isRequired
+};
+
+componentWillMount() {
+  const { cookies } = this.props;
+
+  this.state = {
+    name: cookies.get('name') || 'Ben'
+  };
+}
+
+handleNameChange(name) {
+  const { cookies } = this.props;
+
+  cookies.set('name', name, { path: '/' });
+  this.setState({ name });
+}
+*/
 
 export default class Login extends PureComponent{
 
+componentWillMount() {
+  this.state = {
+    loginname : cookie.load('loginname')};
+}//cookie.load('')
+
+  constructor(props) {
+    super(props);
+
+    this.onLogin = this.onLogin.bind(this);
+    this.onLogout = this.onLogout.bind(this);
+
+    this.state = {
+      isLogin : false,
+      loginname : '',
+      password : '',
+    };
+    /*
+    this.state = {
+      loginname : cookie.load('loginname')};
+      */
+    }
+
+  onLogin(loginname, password) {
+    if(!this.state.isLogin) {
+      this.setState({
+        loginname : this.props.loginname,
+        password : this.props.password
+      });
+      cookie.save('loginname', loginname, { path: '/' });
+    }
+  }//cookie.save
+
+  onLogout() {
+    this.setState({
+      loginname : ''
+    });
+    cookie.remove('loginname', { path: '/' });
+  }//cookie.remove
+
+  validateForm() {
+    return this.state.password.length > 0 && this.state.password.length > 0;
+  }
 
     render() {
         const marginStyle = {
@@ -38,11 +101,14 @@ export default class Login extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-lock"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Password" name="password" type="password" value="" />
+                                                        <input className="form-control" placeholder="Password" name="password" type="password" onClick={this.validateForm} />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
-                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" value="Login" />
+                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" onClick={this.onLogin} value="Login " />
+                                                </div>
+                                                <div>
+                                                      <h4><a href="./Signup" class="btn btn-primary">회원 가입</a></h4>
                                                 </div>
                                             </div>
                                         </div>

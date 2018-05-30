@@ -2,8 +2,37 @@ import React, {PureComponent} from 'react';
 
 export default class Signup extends PureComponent{
 
+  constructor() {
+      super();
+      this.state = {
+          loginname : '',
+          email : '',
+          password : '',
+          password_confirm : ''
+        };
+    }
+
+    onSignup() {
+      /*
+        var state = this.state;
+
+        state[state.loginname] = this.value;
+        state[state.email] = this.value;
+        state[state.password] = this.value;
+        state[state.password_confirm] = this.value;
+
+        this.setState(state);
+*/
+        this.state.loginname = this.value;
+        this.state.email = this.value;
+        this.state.password = this.value;
+        this.state.password_confirm = this.value;
+      }
+
 
     render() {
+        var {loginname, email, password, password_confirm} = this.state;
+
         const marginStyle = {
             "marginTop" : "40px"
         };
@@ -46,7 +75,7 @@ export default class Signup extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-lock"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Password" name="password" type="password" value="" />
+                                                        <input className="form-control" placeholder="Password" name="password" type="password"  />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
@@ -54,11 +83,11 @@ export default class Signup extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-lock"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Password Confirm" name="password_confirm" type="password" value="" />
+                                                        <input className="form-control" placeholder="Password Confirm" name="password_confirm" type="password" />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
-                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" value="Sign up" />
+                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" onClick={this.onSignup} value="Sign up" />
                                                 </div>
                                             </div>
                                         </div>
