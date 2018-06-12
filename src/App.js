@@ -13,7 +13,6 @@ import {
   Jumbotron,
   Button,
 } from 'reactstrap';
-import {Cookies} from 'react-cookie';
 
 class App extends Component {
   constructor(props) {
