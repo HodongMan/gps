@@ -2,37 +2,32 @@ import React, {PureComponent} from 'react';
 
 export default class Signup extends PureComponent{
 
-  constructor() {
-      super();
+  constructor(props) {
+      super(props);
       this.state = {
           loginname : '',
           email : '',
           password : '',
           password_confirm : ''
         };
+        this.handleChange = this.handleChange.bind(this);
+        console.log(this.state)
     }
 
-    onSignup() {
-      /*
-        var state = this.state;
+    handleChange(event) {
+        console.log('Typed: ', event.target.value);
+        return this.setState({value: event.target.value.substr(0,140)});
 
-        state[state.loginname] = this.value;
-        state[state.email] = this.value;
-        state[state.password] = this.value;
-        state[state.password_confirm] = this.value;
-
-        this.setState(state);
-*/
-        this.state.loginname = this.value;
-        this.state.email = this.value;
-        this.state.password = this.value;
-        this.state.password_confirm = this.value;
+    }
+/*
+    onSignup(event) {
+        event.preventDefault();
+        this.setState({ submitted: true });
+        const { loginname } = this.state;
       }
 
-
+*/
     render() {
-        var {loginname, email, password, password_confirm} = this.state;
-
         const marginStyle = {
             "marginTop" : "40px"
         };
@@ -59,7 +54,7 @@ export default class Signup extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-user"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Username" name="loginname" type="text" autoFocus />
+                                                        <input className="form-control" placeholder="Username" name="loginname" type="text" value={this.state.loginname} autoFocus />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
@@ -67,7 +62,7 @@ export default class Signup extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-user"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Email" name="email" type="email" autoFocus />
+                                                        <input className="form-control" placeholder="Email" name="email" type="email" value={this.state.email} autoFocus />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
@@ -75,7 +70,7 @@ export default class Signup extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-lock"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Password" name="password" type="password"  />
+                                                        <input className="form-control" placeholder="Password" name="password" type="password" value={this.state.password} />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
@@ -83,11 +78,11 @@ export default class Signup extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-lock"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Password Confirm" name="password_confirm" type="password" />
+                                                        <input className="form-control" placeholder="Password Confirm" name="password_confirm" type="password" value={this.state.password_confirm} />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
-                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" onClick={this.onSignup} value="Sign up" />
+                                                    <input type="submit" className="btn btn-lg btn-primary btn-block" onClick={this.handleChange} value="Sign up" />
                                                 </div>
                                             </div>
                                         </div>

@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 
 export default class Editpage extends PureComponent{
-    constructor(props) {
+/*    constructor(props) {
       super(props);
 
       this.state = {
@@ -56,7 +56,7 @@ export default class Editpage extends PureComponent{
           password_confirm : this.props.password_confirm
         }
       })
-    }
+  } */
     render() {
         const marginStyle = {
             "marginTop" : "40px"

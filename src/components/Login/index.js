@@ -1,6 +1,32 @@
 import React, {PureComponent} from 'react';
 
 export default class Login extends PureComponent{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            loginname : '',
+            email : '',
+            password : '',
+            password_confirm : '',
+            submitted: false
+          };
+
+        this.OnChange = this.OnChange.bind(this);
+        this.onLogin = this.onLogin.bind(this);
+    }
+
+    OnChange(e) {
+        const {name, value} = e.target;
+        this.setState({ [name] : value});
+    }
+
+    onLogin(e) {
+        e.preventDefault();
+
+        this.setState({ submitted: true });
+        const {loginname, password } = this.state;
+    }
 
     render() {
         const marginStyle = {
@@ -29,7 +55,7 @@ export default class Login extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-user"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Username" name="loginname" type="text" autoFocus />
+                                                        <input className="form-control" placeholder="Username" name="loginname" type="text" value={this.state.loginname} autoFocus />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
@@ -37,7 +63,7 @@ export default class Login extends PureComponent{
                                                         <span className="input-group-addon">
                                                             <i className="glyphicon glyphicon-lock"></i>
                                                         </span>
-                                                        <input className="form-control" placeholder="Password" name="password" type="password" onClick={this.validateForm} />
+                                                        <input className="form-control" placeholder="Password" name="password" type="password" value={this.state.password} />
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
